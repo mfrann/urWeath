@@ -20,4 +20,11 @@ export const gradients = {
   snow: ["#E0EAFC", "#CFDEF3"],
 };
 
-export default gradients;
+export const text = {
+  //Texto blanco para fondos claros
+  light: "#FFFFFF",
+  //Texto negro para fondos oscuros
+  dark: "#333333",
+};
+
+export default { gradients, text };

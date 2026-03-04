@@ -1,7 +1,7 @@
 // Mapeo de condición climática → gradiente, mensaje e ícono
 // Usa los valores exactos que devuelve OpenWeatherMap API
 
-import gradients from "../constants/colors"; //Importar los colores del gradiente
+import { gradients } from "../constants/colors"; //Importar los colores del gradiente
 
 export const getWeatherTheme = (condition: string, isNight = false) => {
   switch (condition) {
