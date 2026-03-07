@@ -1,18 +1,19 @@
-import { Ionicons } from "@expo/vector-icons";
 import { text } from "@/constants/colors";
+import { Feather } from "@expo/vector-icons";
 
+type FeatherIconName = React.ComponentProps<typeof Feather>["name"];
 interface WeatherIconProps {
-  icon: string;
+  name: FeatherIconName;
   size?: number;
   color?: string;
 }
 
 export const WeatherIcon = ({
-  icon,
-  size = 40,
-  color = text.light,
+  name,
+  size = 100,
+  color = text.dark,
 }: WeatherIconProps) => {
-  const safeIcon = icon || "cloud-outline";
+  const safeIcon = name || "cloud-outline";
 
-  return <Ionicons icon={safeIcon} size={size} color={color} />;
+  return <Feather name={safeIcon} size={size} color={color} />;
 };
